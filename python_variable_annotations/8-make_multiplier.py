@@ -3,6 +3,6 @@
 from typing import Union, Tuple
 
 
-def make_multiplier(multiplier: float) -> float
+def make_multiplier(multiplier: float) -> float:
     """ commented function """
     return (multiplier ** 2)
