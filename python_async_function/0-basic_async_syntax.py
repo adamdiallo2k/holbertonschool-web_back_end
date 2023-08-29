@@ -2,7 +2,7 @@
 """ commented module """
 
 import random, asyncio
-import Union
+from typing import Union
 
 
 async def wait_random(max_delay: Union[int, float] = 10) -> float:
