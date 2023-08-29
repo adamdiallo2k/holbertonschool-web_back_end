@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ commented module """
 
-import random, asyncio
+import random
+import asyncio
 from typing import Union
 
 
