@@ -5,7 +5,7 @@ import random, asyncio
 import Union
 
 
-def wait_random(max_delay = 10):
+ def wait_random(max_delay: Union[int, float] = 10) -> float:
     """ commented function """
     await asyncio.sleep(1)
-    return random.randint(0, max_delay)
+    return random.uniform(0, float(max_delay))
