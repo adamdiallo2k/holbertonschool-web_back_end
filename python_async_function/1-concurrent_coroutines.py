@@ -4,6 +4,7 @@
 
 from typing import List
 wait_random = __import__('0-basic_async_syntax').wait_random
+from typing import List
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
@@ -12,5 +13,4 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     for _ in range(n):
         delay = await wait_random(max_delay)
         listfloat.append(delay)
-    listfloat.sort()
-    return listfloat
+    return sorted(listfloat)
