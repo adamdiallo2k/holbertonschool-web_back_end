@@ -6,7 +6,7 @@ import time
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-def measure_time(n: int, max_delay: int) -> float:
+async def measure_time(n: int, max_delay: int) -> float:
     """
     Measures the average execution time for the `wait_n` function.
 
