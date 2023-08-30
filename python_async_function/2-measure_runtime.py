@@ -9,7 +9,7 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 async def measure_time(n: int, max_delay: int) -> float:
     """ commented function """
     start_time = time.time()
-    n = await wait_random(n, max_delay)
+    test = await wait_random(n, max_delay)
     end_time = time.time()
     Total_time = end_time - start_time
     Total_time = Total_time / n
