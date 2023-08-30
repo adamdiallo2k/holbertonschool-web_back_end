@@ -2,7 +2,6 @@
 """measures the total execution time for wait_n"""
 
 
-import random
 import asyncio
 from typing import Union
 task_wait_random = __import__('0-basic_async_syntax').wait_random
