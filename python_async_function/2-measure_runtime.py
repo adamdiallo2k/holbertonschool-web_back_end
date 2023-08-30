@@ -6,13 +6,28 @@ import time
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
-async def measure_time(n: int, max_delay: int) -> float:
-    """Measure total execution time for wait_n(n, max_delay)"""
-    start_time = time.time()
+def measure_time(n: int, max_delay: int) -> float:
+    """
+    Measures the average execution time for the `wait_n` function.
 
+    Args:
+        n (int): The number of times to call `wait_n`.
+        max_delay (int): The maximum delay in seconds for each `wait_n` call.
 
-    await wait_n(n, max_delay)
+    Returns:
+        float: The average execution time per call in seconds.
+    """
 
-    end_time = time.time()
-    total_time = end_time - start_time
-    return total_time / n
+    async def async_measure():
+        """
+        An asynchronous function that measures the execution time of `wait_n`.
+
+        Returns:
+            float: The execution time in seconds for a single `wait_n` call.
+        """
+        start = time.time()
+        await wait_n(n, max_delay)
+        end = time.time()
+        return (end - start) / n
+
+    return asyncio.run(async_measure())
