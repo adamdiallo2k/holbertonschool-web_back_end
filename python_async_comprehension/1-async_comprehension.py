@@ -4,7 +4,7 @@
 
 import asyncio
 import random
-async_generator = __import__('0-async_generator.py').async_generator
+async_generator = __import__('0-async_generator').async_generator
 
 async def async_comprehension():
     """ commented function """
