@@ -1,0 +1,4 @@
+// Update a collection by adding a new attribute
+
+
+db.school.delete({name: "Holberton school"})
