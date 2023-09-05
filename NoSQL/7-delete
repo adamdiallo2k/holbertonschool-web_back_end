@@ -1,4 +1,4 @@
 // Update a collection by adding a new attribute
 
 
-db.school.deleteMans({name: "Holberton school"})
+db.school.deleteManys({name: "Holberton school"})
