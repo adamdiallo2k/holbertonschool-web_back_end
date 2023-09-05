@@ -1,4 +1,5 @@
 // insert a document in a collection
 
 
+use my_db
 db.school({name: "Holberton schoo"})
