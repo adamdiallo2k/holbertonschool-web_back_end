@@ -1,31 +1,18 @@
-export default class Currency {
-  constructor(code, name) {
-    this._code = code;
-    this._name = name;
+export default class Car {
+    constructor(brand, motor, color) {
+      this._brand = brand;
+      this._motor = motor;
+      this._color = color;
+    }
+  
+    // Method to clone the car
+    cloneCar() {
+      return new this.constructor[Symbol.species](this._brand, this._motor, this._color);
+    }
+  
+    // Using Symbol.species to specify the constructor for the cloned instance
+    static get [Symbol.species]() {
+      return this;
+    }
   }
-
-  // Getter for code
-  get code() {
-    return this._code;
-  }
-
-  // Setter for code
-  set code(newCode) {
-    this._code = newCode;
-  }
-
-  // Getter for name
-  get name() {
-    return this._name;
-  }
-  10-car.js
-  // Setter for name
-  set name(newName) {
-    this._name = newName;
-  }
-
-  // Method to display full currency
-  displayFullCurrency() {
-    return `${this._name} (${this._code})`;
-  }
-}
+  
