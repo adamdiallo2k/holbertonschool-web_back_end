@@ -3,7 +3,7 @@ function getListStudentIds(arrayOfStudents) {
   if (!Array.isArray(arrayOfStudents)) {
     return [];
   }
-  const ids = arrayOfStudents.map(student => student.id);
+  const ids = arrayOfStudents.map((student) => student.id);
 
   return ids;
 }
